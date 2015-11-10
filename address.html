@@ -1,0 +1,18 @@
+<div class= "table table-striped" ng-show="!!user.address && !collapsed">
+  <div class="row">
+    <h4 class="col-xs-10"> Address </h4> 
+    <button ng-click="collapseAddress()" class="glyphicon glyphicon-minus"></button>
+  </div>
+    {{user.address.house}}<br/>
+    {{user.address.street}}<br/>
+    {{user.address.city}}<br/>
+    {{user.address.state}} - {{user.address.pincode}} <br/>
+        
+</div>
+<div ng-show="!!user.address && collapsed" >
+  <div class="row">
+    <h4 class="col-xs-10">Address </h4>
+    <button ng-click="expandAddress()" class="glyphicon glyphicon-plus"></button>
+   </div>
+      {{user.address.city}}...
+</div>
